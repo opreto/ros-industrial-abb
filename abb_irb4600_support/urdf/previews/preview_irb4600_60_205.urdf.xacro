@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="preview_irb4600_60_205">
+  <xacro:arg name="tf_prefix" default=""/>
+  
+  <!-- Define world ONLY in preview/top-level -->
+  <link name="world"/>
+
+  <!-- Instantiate -->
+  <xacro:include filename="$(find abb_irb4600_support)/urdf/irb4600_60_205.urdf.xacro"/>
+  <xacro:abb_irb4600_60_205 prefix="$(arg tf_prefix)"/>
+
+  <!-- Attach to world -->
+  <joint name="mount_to_world" type="fixed">
+    <parent link="world"/>
+    <child link="$(arg tf_prefix)base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>

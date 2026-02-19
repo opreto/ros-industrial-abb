@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="abb_irb4600_60_205" params="prefix">
+  <xacro:macro name="abb_irb4600_60_205" params="prefix:=''">
     <!-- link list -->
     <link name="${prefix}base_link">
       <collision name="collision">
@@ -160,7 +160,7 @@
 
     <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
     <link name="${prefix}tool0" />
-    <joint name="${prefix}link_6-tool0" type="fixed">
+    <joint name="${prefix}flange-tool0" type="fixed">
       <origin xyz="0 0 0" rpy="0 ${radians(90)} 0" />
       <parent link="${prefix}flange" />
       <child link="${prefix}tool0" />
