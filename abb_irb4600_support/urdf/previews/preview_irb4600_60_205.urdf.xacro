@@ -7,7 +7,7 @@
   <link name="world"/>
 
   <!-- Instantiate -->
-  <xacro:include filename="$(find abb_irb4600_support)/urdf/irb4600_60_205.urdf.xacro"/>
+  <xacro:include filename="$(find abb_irb4600_support)/urdf/irb4600_60_205_macro.urdf.xacro"/>
   <xacro:abb_irb4600_60_205 prefix="$(arg tf_prefix)"/>
 
   <!-- Attach to world -->
