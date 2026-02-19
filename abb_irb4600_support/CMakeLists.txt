@@ -1,19 +1,20 @@
-cmake_minimum_required(VERSION 3.0.2)
-
+cmake_minimum_required(VERSION 3.8)
 project(abb_irb4600_support)
 
-find_package(catkin REQUIRED)
-
-catkin_package()
-
-if (CATKIN_ENABLE_TESTING)
-  find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(tests/roslaunch_test_irb4600_20_250.xml)
-  roslaunch_add_file_check(tests/roslaunch_test_irb4600_40_255.xml)
-  roslaunch_add_file_check(tests/roslaunch_test_irb4600_60_205.xml)
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-install(DIRECTORY config launch meshes urdf
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
-install(FILES LICENSE
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+find_package(ament_cmake REQUIRED)
+
+install(DIRECTORY launch urdf meshes config
+  DESTINATION share/${PROJECT_NAME}/
+  USE_SOURCE_PERMISSIONS
+)
+
+install(DIRECTORY rviz
+  DESTINATION share/${PROJECT_NAME}/
+  OPTIONAL
+)
+
+ament_package()
