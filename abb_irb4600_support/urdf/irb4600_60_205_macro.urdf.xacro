@@ -16,6 +16,14 @@
           <color rgba="1 1 0 1"/>
         </material>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="81.828765"/>
+        <inertia ixx="1.1415" ixy="0.0105902" ixz="0.156701"
+                 iyy="2.31965" iyz="0.00032"
+                 izz="3.13136"/>
+        <origin xyz="-0.0914 0.000381 0.08247" rpy="0 0 0"/>
+      </inertial>
     </link>
     <link name="${prefix}link_1">
       <collision name="collision">
@@ -29,6 +37,14 @@
         </geometry>
         <material name="yellow"/>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="114.303365"/>
+        <inertia ixx="2.99197" ixy="-0.262121" ixz="0.0804318"
+                 iyy="3.89993" iyz="-0.279368"
+                 izz="3.12186"/>
+        <origin xyz="0.076986 0.024762 -0.0947" rpy="0 0 0"/>
+      </inertial>
     </link>
     <link name="${prefix}link_2">
       <collision name="collision">
@@ -42,6 +58,15 @@
         </geometry>
         <material name="yellow"/>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="75.83976"/>
+        <inertia ixx="5.85548" ixy="-0.00008" ixz="0.000798"
+                 iyy="6.06764" iyz="0.198884"
+                 izz="0.434182"/>
+        <origin xyz="0 -0.17055 0.396832" rpy="0 0 0"/>
+      </inertial>
+
     </link>
     <link name="${prefix}link_3">
       <collision name="collision">
@@ -55,6 +80,15 @@
         </geometry>
         <material name="yellow"/>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="128.2082"/>
+        <inertia ixx="3.06222" ixy="0.199317" ixz="-0.309802"
+                 iyy="3.76188" iyz="0.0384368"
+                 izz="3.09117"/>
+        <origin xyz="0.040168 0.0493055 0.119626" rpy="0 0 0"/>
+      </inertial>
+
     </link>
     <link name="${prefix}link_4">
       <collision name="collision">
@@ -68,6 +102,15 @@
         </geometry>
         <material name="yellow"/>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="30.039968"/>
+        <inertia ixx="0.143877" ixy="0.0152815" ixz="0.00617976"
+                 iyy="1.24666" iyz="0.00008"
+                 izz="1.29441"/>
+        <origin xyz="0.733488 -0.0019699 -0.002854" rpy="0 0 0"/>
+      </inertial>
+
     </link>
     <link name="${prefix}link_5">
       <collision name="collision">
@@ -81,6 +124,15 @@
         </geometry>
         <material name="yellow"/>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="4.06033"/>
+        <inertia ixx="0.00817067" ixy="0.0" ixz="-0.00005"
+                 iyy="0.00847828" iyz="0.00001"
+                 izz="0.009"/>
+        <origin xyz="-0.001046 -0.003447 0.000404" rpy="0 0 0"/>
+      </inertial>
+
     </link>
     <link name="${prefix}link_6">
       <collision name="collision">
@@ -94,6 +146,14 @@
         </geometry>
         <material name="yellow"/>
       </visual>
+      <!-- The following are estimates only, as computed using total robot mass of 445kg distributed according to link volumes. -->
+      <inertial>
+        <mass value="0.71955"/>
+        <inertia ixx="0.00101673" ixy="0.0" ixz="0.0"
+                 iyy="0.000771006" iyz="0.0"
+                 izz="0.000776247"/>
+        <origin xyz="-0.0216378 -0.000286 0.000136" rpy="0 0 0"/>
+      </inertial>
     </link>
     <!-- end of link list -->
 
