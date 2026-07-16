@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="abb_irb4600_60_205" params="prefix:=''">
+  <xacro:macro name="abb_irb4600_60_205"
+    params="prefix:='' revolute_damping:=0 revolute_friction:=0">
     <!-- link list -->
     <link name="${prefix}base_link">
       <collision name="collision">
@@ -171,6 +172,7 @@
       <parent link="${prefix}base_link" />
       <child link="${prefix}link_1" />
       <limit effort="2000" lower="-3.141" upper="3.141" velocity="3.054" />
+      <dynamics damping="${revolute_damping}" friction="${revolute_friction}" />
     </joint>
     <joint type="revolute" name="${prefix}joint_2">
       <origin xyz="0.175 0 0" rpy="0 0 0" />
@@ -178,6 +180,7 @@
       <parent link="${prefix}link_1" />
       <child link="${prefix}link_2" />
       <limit effort="5000" lower="-1.570" upper="2.617" velocity="3.054" />
+      <dynamics damping="${revolute_damping}" friction="${revolute_friction}" />
     </joint>
     <joint type="revolute" name="${prefix}joint_3">
       <origin xyz="0 0 0.9" rpy="0 0 0" />
@@ -185,6 +188,7 @@
       <parent link="${prefix}link_2" />
       <child link="${prefix}link_3" />
       <limit effort="4000" lower="-3.141" upper="1.308" velocity="3.054" />
+      <dynamics damping="${revolute_damping}" friction="${revolute_friction}" />
     </joint>
     <joint type="revolute" name="${prefix}joint_4">
       <origin xyz="0 0 0.175" rpy="0 0 0" />
@@ -192,6 +196,7 @@
       <parent link="${prefix}link_3" />
       <child link="${prefix}link_4" />
       <limit effort="1000" lower="-6.981" upper="6.981" velocity="4.363" />
+      <dynamics damping="${revolute_damping}" friction="${revolute_friction}" />
     </joint>
     <joint type="revolute" name="${prefix}joint_5">
       <origin xyz="0.960 0 0 " rpy="0 0 0" />
@@ -199,6 +204,7 @@
       <parent link="${prefix}link_4" />
       <child link="${prefix}link_5" />
       <limit effort="500" lower="-2.181" upper="2.094" velocity="4.363" />
+      <dynamics damping="${revolute_damping}" friction="${revolute_friction}" />
     </joint>
     <joint type="revolute" name="${prefix}joint_6">
       <origin xyz="0.135 0 0 " rpy="0 0 0" />
@@ -206,6 +212,7 @@
       <parent link="${prefix}link_5" />
       <child link="${prefix}link_6" />
       <limit effort="250" lower="-6.981" upper="6.981" velocity="6.283" />
+      <dynamics damping="${revolute_damping}" friction="${revolute_friction}" />
     </joint>
     <!-- end of joint list -->
 
