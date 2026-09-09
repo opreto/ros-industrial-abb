@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:macro name="abb_irb4600_60_205"
-    params="prefix:='' revolute_damping:=0 revolute_friction:=0">
+    params="prefix:='' revolute_damping:=0 revolute_friction:=0 include_collision:=true">
     <!-- link list -->
     <link name="${prefix}base_link">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600/collision/base_link.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600/collision/base_link.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600/visual_obj/base_link.obj" />
@@ -28,11 +30,13 @@
       </inertial>
     </link>
     <link name="${prefix}link_1">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600/collision/link_1.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600/collision/link_1.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600/visual_obj/link_1.obj" />
@@ -50,11 +54,13 @@
       </inertial>
     </link>
     <link name="${prefix}link_2">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_2.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_2.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/visual_obj/link_2.obj" />
@@ -73,11 +79,13 @@
 
     </link>
     <link name="${prefix}link_3">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_3.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_3.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/visual_obj/link_3.obj" />
@@ -96,11 +104,13 @@
 
     </link>
     <link name="${prefix}link_4">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_4.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_4.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/visual_obj/link_4.obj" />
@@ -119,11 +129,13 @@
 
     </link>
     <link name="${prefix}link_5">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_5.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_5.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/visual_obj/link_5.obj" />
@@ -142,11 +154,13 @@
 
     </link>
     <link name="${prefix}link_6">
-      <collision name="collision">
-        <geometry>
-          <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_6.stl" />
-        </geometry>
-      </collision>
+      <xacro:if value="${include_collision}">
+        <collision name="collision">
+          <geometry>
+            <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/collision/link_6.stl" />
+          </geometry>
+        </collision>
+      </xacro:if>
       <visual name="visual">
         <geometry>
           <mesh filename="package://abb_irb4600_support/meshes/irb4600_60_205/visual_obj/link_6.obj" />
